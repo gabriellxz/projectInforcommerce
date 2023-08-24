@@ -7,7 +7,7 @@ import * as productService from '../../../services/product-service'
 import { useParams } from 'react-router-dom';
 import { ProductsDTO } from '../../../models/product';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 
 export default function ProductDetails() {
 
@@ -17,9 +17,10 @@ export default function ProductDetails() {
 
     useEffect(() => {
         /*requisição backend com useEffect */
-        axios.get("http://localhost:8080/products/1")
+        productService.findById(Number(params.productId))
             .then(response => {
-                console.log(response)
+                console.log(response.data)
+                setProduct(response.data)
             })
 
         /*sem requisição com useEffect*/

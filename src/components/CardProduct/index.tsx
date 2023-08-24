@@ -10,7 +10,7 @@ export default function CardProduct(props: ProductProps) {
     return (
         <div className="dsc-card dsc-mb20">
             <div className="dsc-product-details-top dsc-line-bottom">
-                <img src={props.product.imageUrl} alt={props.product.name} />
+                <img src={props.product.imgUrl} alt={props.product.name} />
             </div>
             <div className="dsc-product-details-bottom">
                 <h3>R$ {props.product.price.toFixed(2)}</h3>

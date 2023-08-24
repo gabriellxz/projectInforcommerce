@@ -12,7 +12,7 @@ export default function CatalogCard(props: CatalogProps) {
         <Link to={`productDetails/${props.product.id}`}>
             <div className="dsc-card">
                 <div className="dsc-catalog-card-top dsc-line-bottom">
-                    <img src={props.product.imageUrl} alt={props.product.name} />
+                    <img src={props.product.imgUrl} alt={props.product.name} />
                 </div>
                 <div className="dsc-catalog-card-bottom">
                     <h3>R$ {props.product.price.toFixed(2)}</h3>

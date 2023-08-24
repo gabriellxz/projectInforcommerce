@@ -5,6 +5,6 @@ export type ProductsDTO = {
     name: string;
     description: string;
     price: number;
-    imageUrl: string;
+    imgUrl: string;
     categories: CategoryDTO[];
 }
