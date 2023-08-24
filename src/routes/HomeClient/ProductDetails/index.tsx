@@ -4,7 +4,7 @@ import ButtonPrimary from "../../../components/ButtonPrimary";
 import CardProduct from "../../../components/CardProduct";
 //import { ProductsDTO } from '../../../models/product';
 import * as productService from '../../../services/product-service'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ProductsDTO } from '../../../models/product';
 import { useEffect, useState } from 'react';
 //import axios from 'axios';
@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 export default function ProductDetails() {
 
     const params = useParams()
-
+    const navigate = useNavigate()
     const [product, setProduct] = useState<ProductsDTO>()
 
     useEffect(() => {
@@ -21,6 +21,9 @@ export default function ProductDetails() {
             .then(response => {
                 console.log(response.data)
                 setProduct(response.data)
+            }).catch(error => {
+                navigate('*')
+                console.log(error.response.data.error)
             })
 
         /*sem requisição com useEffect*/

@@ -20,7 +20,7 @@ export default function Catalog() {
             .then(response => {
                 console.log(response.data.content)
                 setProducts(response.data.content)
-            })
+            })  
     }, [])
 
     return (
