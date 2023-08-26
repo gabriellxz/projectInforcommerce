@@ -2,4 +2,10 @@
     border: none;
     background-color: var(--dsc-color-btn-primary);
     color: var(--dsc-color-btn-inverse);
+    border-radius: 4px;
+    height: 42px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

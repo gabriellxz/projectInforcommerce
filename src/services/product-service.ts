@@ -9,4 +9,3 @@ export function findAll() {
 export function findById(id: number) {
     return axios.get(`${BASE_URL}/products/${id}`)
 }
-

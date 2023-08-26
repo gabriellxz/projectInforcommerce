@@ -5,8 +5,8 @@ import InputPreco from '../../components/InputPreco';
 import InputImage from '../../components/InputImage';
 import Select from '../../components/Select';
 import Textarea from '../../components/Textarea';
-import ButtonCancel from '../../components/ButtonCancel';
-import ButtonSave from '../../components/ButtonSave';
+import ButtonInverse from '../../components/ButtonInverse';
+import ButtonPrimary from '../../components/ButtonPrimary';
 
 export default function AdminForm() {
     return (
@@ -26,8 +26,8 @@ export default function AdminForm() {
                             </div>
 
                             <div className="dsc-product-form-buttons">
-                                <ButtonCancel/>
-                                <ButtonSave/>
+                                <ButtonInverse name='Cancelar'/>
+                                <ButtonPrimary name='Salvar'/>
                             </div>
                         </form>
                     </div>

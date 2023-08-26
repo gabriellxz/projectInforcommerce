@@ -7,6 +7,7 @@ import { ProductsDTO } from '../../../models/product'
 import { useState, useEffect } from 'react'
 //import axios from 'axios'
 import * as productService from '../../../services/product-service'
+import { CategoryDTO } from '../../../models/category'
 //import imageCart from '../../assets/img/cart.svg'
 
 
@@ -15,7 +16,17 @@ export default function Catalog() {
 
     const [products, setProducts] = useState<ProductsDTO[]>([])
 
+    const obj : CategoryDTO = {
+        id: 8,
+        name: "Jardinagem"
+    }
+
     useEffect(() => {
+
+        //localStorage.setItem("categories", JSON.stringify(obj))
+        const obj = JSON.parse(localStorage.getItem("categories") || "{}")
+        console.log(obj.name)
+
         productService.findAll()
             .then(response => {
                 console.log(response.data.content)
