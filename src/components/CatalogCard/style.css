@@ -23,6 +23,10 @@
     height: 78px;
 }
 
+.dsc-catalog-card-top img {
+    width: 200px;
+}
+
 .dsc-cart-item-left {
     display: flex;
 }
