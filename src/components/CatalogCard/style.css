@@ -6,7 +6,7 @@
     padding: 10px 20px;
 }
 
-.dsc-cart-total-container h3 {
+.dsc-catalog-card-bottom h3 {
     text-align: left;
     font-size: 16px;
     color: var(--dsc-color-font-secondary);
@@ -25,6 +25,10 @@
 
 .dsc-catalog-card-top img {
     width: 200px;
+}
+
+.dsc-card {
+    padding: 1em;
 }
 
 .dsc-cart-item-left {
