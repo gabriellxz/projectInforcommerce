@@ -35,6 +35,11 @@
     display: flex;
 }
 
+.dsc-catalog-card-bottom h4 {
+    color: var(--dsc-color-font-primary);
+    font-weight: 200;
+}
+
 .dsc-cart-item-quantity-container {
     font-size: 16px;
     font-weight: 700;

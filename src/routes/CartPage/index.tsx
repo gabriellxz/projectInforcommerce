@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './style.css'
 import * as cartService from "../../services/cart-service"
-import { OrderDTO, OrderItemDTO } from '../../models/order'
+import { OrderDTO } from '../../models/order'
 import { Link } from 'react-router-dom'
 // import imgComputer from '../../assets/img/computer.png'
 
@@ -9,13 +9,18 @@ export default function CartPage() {
 
     const [cart, setCart] = useState<OrderDTO>(cartService.getCart())
 
+    function handleClearCart() {
+        cartService.clearCart()
+        setCart(cartService.getCart())
+    }
+
     return (
         <main>
             <section id="cart-container-section" className="dsc-container">
                 {
                     cart.items.length === 0 ?
                         (
-                            <div>
+                            <div className='message-cart'>
                                 <h2>Seu carrinho está vazio</h2>
                             </div>
                         )
@@ -58,6 +63,15 @@ export default function CartPage() {
                             Continuar comprando
                         </div>
                     </Link>
+                    {
+                        cart.items.length === 0
+                            ?
+                            <div></div>
+                            :
+                            <div onClick={handleClearCart} className="dsc-btn dsc-btn-white">
+                                Limpar carrinho
+                            </div>
+                    }
                 </div>
             </section>
         </main>
