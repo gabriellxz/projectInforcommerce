@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ProductDetails from './routes/HomeClient/ProductDetails'
 import Catalog from './routes/HomeClient/Catalog'
 import HomeClient from './routes/HomeClient'
-import AdminForm from './routes/Adminform'
+// import AdminForm from './routes/Adminform'
 import CartPage from './routes/CartPage'
 
 function App() {
